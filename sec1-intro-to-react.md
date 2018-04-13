@@ -31,6 +31,7 @@ const element = <h1>Hello, world!</h1>;
 ![](https://raw.githubusercontent.com/floydchenchen/pictures/master/Screen%20Shot%202018-04-10%20at%209.02.31%20PM.png)
 
 components:
+
 ![](https://raw.githubusercontent.com/floydchenchen/pictures/master/Screen%20Shot%202018-04-12%20at%206.37.48%20PM.png)
 
 * rule: we always make one component per file
