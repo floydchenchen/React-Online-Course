@@ -1,25 +1,9 @@
-# ReduxSimpleStarter
+# Intro to React: Youtube Search
 
-Interested in learning [Redux](https://www.udemy.com/react-redux/)?
+## purpose
+An youtube Search page built with React that utilizes youtube api to render first five search results and play the video on the page.
 
-### Getting Started
+## screenshot
+![](https://raw.githubusercontent.com/floydchenchen/pictures/master/Screen%20Shot%202018-04-13%20at%2010.13.04%20AM.png)
 
-There are two methods for getting started with this repo.
 
-#### Familiar with Git?
-Checkout this repo, install dependencies, then start the gulp process with the following:
-
-```
-> git clone https://github.com/StephenGrider/ReduxSimpleStarter.git
-> cd ReduxSimpleStarter
-> npm install
-> npm start
-```
-
-#### Not Familiar with Git?
-Click [here](https://github.com/StephenGrider/ReactStarter/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
-
-```
-> npm install
-> npm start
-```
