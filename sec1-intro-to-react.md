@@ -63,5 +63,56 @@ two steps to handling user events:
 * declare a event handler
 * pass the event handler to the element that we want to monitor for events
  
+```JavaScript
+ /* class component */
+render() {
+        return <input onChange={(event) => console.log(event.target.value)}/>;
+    }
+```
+ 
+## Introduction to State
+* state is a plain JavaScript object that is used to **record and react to user events**.
+* each **class based component** (not functional component) defined has its own state object
+* when ever the state is changed, the component (with all its children) immediately re-renders
+
+```JavaScript
+/* class component */
+class SearchBar extends Component{
+
+    constructor(props) {
+        super(props);
+
+        this.state = { term: ''}
+    }
+
+    render() {
+        return (
+            <div>
+                <input onChange={(event) => this.setState({ term: event.target.value })} />
+                Value of the input: { this.state.term }
+            </div>
+        )
+    }
+}
+```
+![](https://raw.githubusercontent.com/floydchenchen/pictures/master/Screen%20Shot%202018-04-13%20at%205.37.29%20AM.png)
+
+## controlled components
+
+```JavaScript
+render() {
+    return (
+        <div>
+            <input
+                // the value of the input equals the state
+                value = {this.state.term}
+                onChange={(event) => this.setState({ term: event.target.value })}
+            />
+        </div>
+    )
+}
+```
+
+* When the user type something, they **don't really change the input value**, instead they **trigger an user event** that causes the value of the input to change.
 
 
