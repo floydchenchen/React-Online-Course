@@ -1,5 +1,5 @@
 # React with Redux Readme
 ## content
-[](./sec1-intro-to-react.md)
+[Section1: Intro to React](./sec1-intro-to-react.md)
 
 
