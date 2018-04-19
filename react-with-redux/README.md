@@ -1,25 +1,15 @@
-# ReduxSimpleStarter
+# A List Of Books App
 
-Interested in learning [Redux](https://www.udemy.com/react-redux/)?
+## purpose
+A List Of Books App built with React and Redux. When clicking on the list of the books on the left, the page dynamically show the detail of the clicked book.
 
-### Getting Started
+![](https://raw.githubusercontent.com/floydchenchen/pictures/master/Screen%20Shot%202018-04-13%20at%209.45.36%20AM.png)
 
-There are two methods for getting started with this repo.
 
-#### Familiar with Git?
-Checkout this repo, install dependencies, then start the gulp process with the following:
+## screenshot
+![](https://raw.githubusercontent.com/floydchenchen/pictures/master/Screen%20Shot%202018-04-19%20at%2012.31.57%20AM.png)
+![](https://raw.githubusercontent.com/floydchenchen/pictures/master/Screen%20Shot%202018-04-19%20at%2012.32.03%20AM.png)
 
-```
-> git clone https://github.com/StephenGrider/ReduxSimpleStarter.git
-> cd ReduxSimpleStarter
-> npm install
-> npm start
-```
+## schematic diagram
+![](https://raw.githubusercontent.com/floydchenchen/pictures/master/Screen%20Shot%202018-04-19%20at%201.02.23%20AM.png)
 
-#### Not Familiar with Git?
-Click [here](https://github.com/StephenGrider/ReactStarter/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
-
-```
-> npm install
-> npm start
-```
