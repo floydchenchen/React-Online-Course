@@ -10,6 +10,9 @@ YTSearch({ key: API_KEY, term: 'surfboards' }, (videos) => {
 });
 ```
 
+### downwards dataflow
+Only the most parent component in the application should be responsible for fetching data
+
 ## props
 
 index.js

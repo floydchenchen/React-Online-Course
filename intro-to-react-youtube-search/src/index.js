@@ -36,6 +36,7 @@ class App extends Component {
 
     render() {
 
+        // returns a new function that can only be called every 300 milliseconds
         const videoSearch = _.debounce((term) => {this.videoSearch(term)}, 300);
 
         return (

@@ -36,7 +36,41 @@ components:
 
 * rule: we always make one component per file
 
-## class-based components
+## ReactDOM vs React
+* React and ReactDOM are two separate libraries.
+* ReactDOM is the glue between React and the DOM
+* Often, you will only use it for one single thing: mounting with `ReactDOM.render()`
+* Another useful feature of ReactDOM is `ReactDOM.findDOMNode()` which you can use to gain direct access to a DOM element.
+
+## component class vs component instance
+
+```JavaScript
+// this is a component class
+const App = function() {
+    return <div>Hi!</div>;
+}
+```
+
+```JavaScript
+// a component instance of “App” 
+ReactDOM.render(<App />);
+```
+
+## render targets
+```JavaScript
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+// Create a new component. This component should produce some HTML
+const App = function() {
+    return <div>Hi!</div>;
+}
+
+// Take this component's generated HTML and put it on the page in the DOM (inside the div whose class is "container")
+ReactDOM.render(<App />, document.querySelector('.container'));
+```
+
+## component structure
 * functional component: create a component with a function
 
 ```JavaScript
@@ -47,7 +81,7 @@ return (
 );
 ```
 
-* class component: internal record-keeping feature
+* class component: **internal record-keeping** feature
 
 ```
 class SearchBar extends Component{
@@ -99,6 +133,8 @@ class SearchBar extends Component{
 
 ## controlled components
 
+**The state should tell the input what its value should be**
+
 ```JavaScript
 render() {
     return (
@@ -113,6 +149,6 @@ render() {
 }
 ```
 
-* When the user type something, they **don't really change the input value**, instead they **trigger an user event** that causes the value of the input to change.
+* When the user type something, they **don't really change the input value**, instead they **trigger an user event** that 1. changes the state 2. which causes the value of the input to change.
 
 

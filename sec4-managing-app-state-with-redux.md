@@ -5,7 +5,7 @@
 ![](https://raw.githubusercontent.com/floydchenchen/pictures/master/Screen%20Shot%202018-04-13%20at%209.45.36%20AM.png)
 
 ## Reducer
-* reducer: a function that returns a piece of the application state
+* reducer: a function that **returns a piece of the application state**
 * for the list of books app, a reducer for list of books; another reducer for currently selected books
 * reducers produce the value of our state.
 
@@ -17,12 +17,12 @@
 * wire it into our application
 
 ## Container: Connecting Redux to React
-* container: a component that has direct access to the state produced by redux
+* container: a **component** that has direct access to the state produced by redux
 * react-redux: form a bridge between redux library and react library
 ![](https://raw.githubusercontent.com/floydchenchen/pictures/master/Screen%20Shot%202018-04-13%20at%202.04.15%20PM.png)
-
 * app: dumb component: dumb component (no connection to redux)
 * book list & book detail: smart component (connected to redux)
+* only the most parent component that uses a particular piece of state needs to be connected to redux
 
 ### connect function
 
@@ -95,6 +95,12 @@ export default connect(mapStateToProps)(BookList);
 ## Action and Action Creators
 ###### the lifecycle of an action in a redux application (when an user clicks on a book)
 ![](https://raw.githubusercontent.com/floydchenchen/pictures/master/Screen%20Shot%202018-04-13%20at%202.43.55%20PM.png)
+
+* action creator: a function that returns an object/action (in this case clicked by the user)
+* the object/action is automatically sent to all reducers
+* depending on the actions, the reducers can choose to return a different piece of state
+* the newly returned piece of state gets piped into application state, and it pops up as the new value of the state
+* then it gets pumped back to the react application and cause re-rendering
 
 ## Binding Action Creators
 * Turns an object whose values are action creators, into an object with the same keys, but with every action creator wrapped into a dispatch call so they may be invoked directly.

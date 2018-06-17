@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { selectBook } from '../actions/index';
 import { bindActionCreators } from 'redux';
 
-
+// this class is not exported as default anymore since it uses redux
 class BookList extends Component {
 
     renderList() {
@@ -13,7 +13,9 @@ class BookList extends Component {
                     // call the bind action creator
                     onClick={() => this.props.selectBook(book)}
                     className="list-group-item">
+
                     {book.title}
+
                 </li>
             );
         });
